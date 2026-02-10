@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: iranYekan;
+  src: url('/assets/fonts/iranyekan-regular.woff2') format('woff2'),
+    url('/assets/fonts/iranyekan-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: vazir;
+  src: url('/assets/fonts/VAZIR\ REGULAR.TTF') format('truetype'),
+    url('/assets/fonts/VAZIR\ BOLD.TTF') format('truetype');
+}
+
+
+:root {
+  --background: #f8fafc;
+  --background2: #fff;
+  --foreground: #64748b;
+  --text-color: #1e293b;
+  --primery-gradient: linear-gradient(180deg, #1e3a8a, #1e40af);
+  --primery-gradient-text: #fff;
+  --primery-gradient2: linear-gradient(135deg, #3b82f6, #6366f1);
+  --primery-gradient3: linear-gradient(to left, #3b82f6, #8b5cf6);
+  --primery-gradient4: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  --primery-gradient5: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+  --primery-gradient6: linear-gradient(135deg, #10b981, #059669);
+
+  --primery: #3b82f6;
+  --primery-text: #fff;
+  --primery-2: #0ea5e9;
+  --secondary: #ecc371;
+  --secondary-2: linear-gradient(135deg, #ef4444, #dc2626);
+  --secondary-3: #dbeafe;
+  --secondary-4: #f6f9fb;
+  --secondary-5: #ef4444;
+  --secondary-6: #f1f5f9;
+  --secondary-7: #10b981;
+
+  --box-shadow-secondary-2: 0 2px 8px rgba(239, 68, 68, 0.3);
+  --border: #e2e8f0;
+  --success-bg: #d1fae5;
+  --success: #065f46;
+
+  --danger-bg: #fee2e2;
+  --danger: #991b1b;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar {
+  @apply w-2
+}
+
+
+::-webkit-scrollbar-thumb {
+  @apply bg-(--primery)
+}
+
+body {
+  font-family: iranYekan, vazir;
+  @apply bg-(--background) text-(--text-color)
+}
+
+aside {
+  background-image: var(--primery-gradient);
+  color: var(--primery-gradient-text);
+}
+
+
+
+input {
+  @apply outline-0
+}
+
+main {
+  @apply md:p-8 p-4 overflow-x-hidden space-y-20
+}
+
+.secondary-2 {
+  background-image: var(--secondary-2);
+}
+
+.primery-gradient {
+  background-image: var(--primery-gradient);
+}
+
+.primery-gradient2 {
+  background-image: var(--primery-gradient2);
+}
+
+.primery-gradient3 {
+  background-image: var(--primery-gradient3);
+}
+
+.primery-gradient4 {
+  background-image: var(--primery-gradient4);
+}
+
+.primery-gradient5 {
+  background-image: var(--primery-gradient5);
+}
+
+.primery-gradient6 {
+  background-image: var(--primery-gradient6);
+}
+
+
+.linksButton,
+.button {
+  @apply cursor-pointer bg-gray-200 transition hover:bg-gray-400 rounded px-2 py-1
+}
+.button{
+  @apply hover:bg-(--primery) hover:text-(--primery-text)
+}
+.window {
+  @apply z-1000 opacity-0 pointer-events-none transition-all fixed left-0 top-0 bg-[#00000073] backdrop-blur h-full w-full
+}
+
+.window.active {
+  @apply opacity-100 pointer-events-auto
+}
+
+.borderStyle {
+  @apply border-2 border-(--border)
+}
