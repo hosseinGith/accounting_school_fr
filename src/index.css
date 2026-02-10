@@ -109,9 +109,15 @@ main {
 .button {
   @apply cursor-pointer bg-gray-200 transition hover:bg-gray-400 rounded px-2 py-1
 }
-.button{
+
+.button {
   @apply hover:bg-(--primery) hover:text-(--primery-text)
 }
+
+.button.active {
+  @apply bg-(--primery) text-(--primery-text)
+}
+
 .window {
   @apply z-1000 opacity-0 pointer-events-none transition-all fixed left-0 top-0 bg-[#00000073] backdrop-blur h-full w-full
 }
@@ -122,4 +128,15 @@ main {
 
 .borderStyle {
   @apply border-2 border-(--border)
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
