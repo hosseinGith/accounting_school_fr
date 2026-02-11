@@ -1,4 +1,3 @@
-import React from "react";
 import SummaryOfTheSituationItem from "./SummaryOfTheSituationItem";
 
 export default function SummaryOfTheSituation() {
