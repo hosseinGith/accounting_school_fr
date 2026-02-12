@@ -2,7 +2,7 @@ import Timer from "../../../components/ui/Timer";
 import WelcomePageWraper from "../../../components/ui/WelcomePageWraper";
 function getPersianDate() {
   const now = new Date();
-  const options = {
+  const options: Intl.DateTimeFormatOptions = {
     year: "numeric",
     month: "numeric",
     day: "numeric",
