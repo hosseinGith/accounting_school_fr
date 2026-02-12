@@ -4,7 +4,7 @@ export default function List() {
   return (
     <section className="borderStyle rounded-2xl bg-(--background2) *:p-4 divide-(--border) divide-y-2">
       {/* header */}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center flex-wrap gap-y-4">
         <div className="font-bold text-lg flex gap-2 items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,8 +29,8 @@ export default function List() {
         </div>
       </div>
 
-      <div className="max-h-100 relative p-0! overflow-auto">
-        <table className="w-full whitespace-nowrapu">
+      <div className="max-h-100 whitespace-nowrap relative p-0! overflow-auto">
+        <table className="w-full ">
           <thead className="sticky top-0 right-0 bg-(--background2)">
             <tr className="*:text-start *:py-4 *:px-2 border-b-2 border-(--border)">
               <th>ردیف</th>
