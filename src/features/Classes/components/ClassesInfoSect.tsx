@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import InfoSlide from "../../../components/ui/InfoSlide";
 
-export default function StudentsInfoSect() {
+export default function ClassesInfoSect() {
   return (
     <motion.section
       animate={{ opacity: 100 }}

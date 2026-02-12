@@ -4,7 +4,7 @@ import WindowBase from "../../../../components/ui/Window/WindowBase";
 import Textarea from "../../../../components/ui/Textarea";
 import Input from "../../../../components/ui/Input";
 import Select from "../../../../components/ui/Select";
-export default function AddStudent() {
+export default function AddClass() {
   const weekDaysName = {
     saturday: "شنبه",
     sunday: "یکشنبه",
@@ -112,7 +112,7 @@ export default function AddStudent() {
           لغو
         </Link>
         <button className="linksButton hover:opacity-90 hover:shadow-lg hover:-translate-y-1 shadow transition-all primery-gradient6 text-white rounded-lg">
-          ذخیره دانش‌آموز
+          اضافه کردن
         </button>
       </div>
     </WindowBase>

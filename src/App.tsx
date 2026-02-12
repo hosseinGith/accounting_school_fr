@@ -2,6 +2,7 @@ import { BrowserRouter, Outlet, Route, Routes } from "react-router";
 import { lazy } from "react";
 import Aside from "./components/ui/aside";
 import MobileNav from "./components/ui/MobileNav/MobileNav";
+import ClasseEdit from "./features/ClasseEdit";
 const MainPage = lazy(() => import("./features/MainPage"));
 const Students = lazy(() => import("./features/Students"));
 const Classes = lazy(() => import("./features/Classes/index"));
@@ -28,7 +29,10 @@ function App() {
           >
             <Route index element={<MainPage />} />
             <Route path="students" element={<Students />} />
-            <Route path="classes" element={<Classes />} />
+            <Route path="classes">
+              <Route index element={<Classes />}></Route>
+              <Route path=":id" element={<ClasseEdit />}></Route>
+            </Route>
             <Route path="reports" element={<Reports />} />
           </Route>
         </Routes>

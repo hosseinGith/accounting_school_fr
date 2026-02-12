@@ -1,5 +1,5 @@
-import AddStudent from "./components/AddClass";
-import StudentsInfoSect from "./components/ClassesInfoSect";
+import AddClass from "./components/AddClass";
+import ClassesInfoSect from "./components/ClassesInfoSect";
 import SearchAndFilter from "./components/SearchAndFilter";
 import WelcomeSect from "./components/WelcomeSect";
 
@@ -8,10 +8,10 @@ export default function Classes() {
     <>
       <main>
         <WelcomeSect />
-        <StudentsInfoSect />
-        <SearchAndFilter/>
+        <ClassesInfoSect />
+        <SearchAndFilter />
       </main>
-      <AddStudent />
+      <AddClass />
     </>
   );
 }

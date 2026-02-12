@@ -77,7 +77,7 @@ export default function AddStudent() {
           لغو
         </Link>
         <button className="linksButton hover:opacity-90 hover:shadow-lg hover:-translate-y-1 shadow transition-all primery-gradient6 text-white rounded-lg">
-          ذخیره دانش‌آموز
+          اضافه کردن
         </button>
       </div>
     </WindowBase>

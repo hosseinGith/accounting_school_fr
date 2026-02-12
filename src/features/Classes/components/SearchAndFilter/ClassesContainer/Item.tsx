@@ -1,4 +1,7 @@
+import { Link } from "react-router";
+
 export default function Item({
+  classId,
   currentStudentsCount,
   allStudentsCount,
   code,
@@ -8,6 +11,7 @@ export default function Item({
   room,
   title,
 }: {
+  classId: number;
   currentStudentsCount: number;
   allStudentsCount: number;
   code: string;
@@ -24,7 +28,7 @@ export default function Item({
         <span className="text-2xl">{title}</span>
         <span className="">کد: {code}</span>
       </div>
-      <div>
+      <Link className="block" to={`/classes/${classId}`}>
         <table className="**:px-1 **:py-4 *:border-b-2 *:border-(--border) w-full">
           <tbody>
             <tr>
@@ -63,9 +67,12 @@ export default function Item({
             </tr>
           </tbody>
         </table>
-      </div>
+      </Link>
       <div className="mb-4 flex justify-center *:cursor-pointer gap-2">
-        <button className="bg-(--primery-2) rounded-2xl text-white flex gap-2 py-2 px-4 hover:opacity-85 transition">
+        <Link
+          to={`/classes/${classId}`}
+          className="bg-(--primery-2) rounded-2xl text-white flex gap-2 py-2 px-4 hover:opacity-85 transition"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -81,8 +88,8 @@ export default function Item({
             />
           </svg>
           ویرایش
-        </button>
-        <button className="bg-(--secondary-7) rounded-2xl text-white flex gap-2 py-2 px-4 hover:opacity-85 transition">
+        </Link>
+        <button className="bg-(--secondary-5) rounded-2xl text-white flex gap-2 py-2 px-4 hover:opacity-85 transition">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -102,7 +109,7 @@ export default function Item({
               d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
             />
           </svg>
-          مشاهده
+          حذف
         </button>
       </div>
     </div>

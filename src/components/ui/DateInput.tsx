@@ -1,10 +1,16 @@
 import { useState, type ChangeEvent } from "react";
 
-export default function DateInput({ className = "" }: { className?: string }) {
+export default function DateInput({
+  duf,
+  className = "",
+}: {
+  duf?: { day: number; month: number; year: number };
+  className?: string;
+}) {
   const [inputsValue, setInputsValue] = useState({
-    inputYear: "1404",
-    inpuTMonth: "10",
-    inputDay: "30",
+    inputYear: duf?.year || "1404",
+    inpuTMonth: duf?.month || "10",
+    inputDay: duf?.day || "30",
   });
   function onChange(
     e: ChangeEvent,
@@ -25,7 +31,7 @@ export default function DateInput({ className = "" }: { className?: string }) {
   }
   return (
     <div
-      className={`flex *:py-4 *:text-center rounded-md px-1 p-0 borderStyle ${className}`}
+      className={`bg-(--background2) flex *:py-4 *:text-center rounded-md px-1 p-0 borderStyle ${className}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

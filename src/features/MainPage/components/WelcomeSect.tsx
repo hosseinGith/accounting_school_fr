@@ -1,14 +1,23 @@
 import Timer from "../../../components/ui/Timer";
 import WelcomePageWraper from "../../../components/ui/WelcomePageWraper";
-
+function getPersianDate() {
+  const now = new Date();
+  const options = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    weekday: "long",
+  };
+  return now.toLocaleDateString("fa-IR", options);
+}
 export default function WelcomeSect() {
   return (
     <WelcomePageWraper
       description="به پنل مدیریت آموزشگاه زبان خوش آمدید"
       title="عصر بخیر، مدیر محترم! 👋"
     >
-      <span className=" text-lg font-bold text-(--primery)">
-        {/* <PersionDate /> */}
+      <span dir="ltr" className=" text-lg font-bold text-(--primery)">
+        {getPersianDate()}
       </span>
       <div className="flex gap-2  justify-end w-full">
         <svg

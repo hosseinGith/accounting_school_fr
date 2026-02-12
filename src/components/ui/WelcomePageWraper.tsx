@@ -6,7 +6,7 @@ export default function WelcomePageWraper({
   children,
 }: {
   title: string;
-  description: string;
+  description: string | ReactNode;
   children: ReactNode;
 }) {
   return (
@@ -32,9 +32,11 @@ export default function WelcomePageWraper({
           </div>
           <span className="text-2xl font-bold"> {title}</span>
         </div>
-        <p>{description}</p>
+        <div>{description}</div>
       </div>
-      <div className="w-full md:w-max  items-center flex flex-col justify-center gap-4">{children}</div>
+      <div className="w-full md:w-max  items-center flex flex-col justify-center gap-4">
+        {children}
+      </div>
     </section>
   );
 }
