@@ -52,7 +52,7 @@ export default function AddStudent() {
           required
           className={`${Search.isActive ? "rounded-b-none" : ""}`}
         />
-        <SearchResult />
+        <SearchResult value={Search.value} />
       </div>
     </WindowBase>
   );
