@@ -145,8 +145,11 @@ export default function StudentClassEdit() {
       </div>
       <div className="flex justify-end items-center gap-6 *:px-4! *:py-2! mt-4 p-4">
         <Link to="#" className="linksButton ">
-          لغو
+          انصراف
         </Link>
+        <button className="linksButton bg-(--secondary-5)! text-white hover:opacity-75">
+          حذف دانش آموز
+        </button>
         <button className="linksButton hover:opacity-90 hover:shadow-lg hover:-translate-y-1 shadow transition-all primery-gradient6 text-white rounded-lg">
           ذخیره دانش‌آموز
         </button>
